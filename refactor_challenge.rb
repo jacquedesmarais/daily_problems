@@ -80,7 +80,7 @@ def decoded_cipher_refactored(coded_message)
       elsif x == "@" || x == "#" || x == "$" || x == "%"|| x == "^" || x == "&"|| x =="*"
         decoded_sentence << " "
         break
-      elsif x == "." || x == "!"
+       elsif x == "." || x == "!" || x == "?"
         decoded_sentence << x
         break 
       end
@@ -104,11 +104,8 @@ puts decoded_cipher_refactored("m^aerx%e&gsoi!") == "i want a coke!" #This is dr
 
 # Task 2: Write additional tests
 # Create more driver test code based on the decoded messages. Driver test code statements should always return "true."
-
-
-
-
-
+puts decoded_cipher_refactored("hs%csy#pmoi*tmdde?") == "do you like pizza?"
+puts decoded_cipher_refactored("xskixliv^sv&rsx*ex#epp.") == "together or not at all."
 
 puts
 puts "Finished running tests."
