@@ -1,11 +1,19 @@
 function findTheMostLetterA(array) {
-  var count = 0;
-  array.forEach(function(word) {
-    if (word === "a") {
-      count += 1;
+  var max = "";
+  var maxCount = 0;
+  for (var i = 0; i < array.length; i++) {
+    var count = 0;
+    for (var j = 0; j < array[i].length; j++) {
+      if (array[i][j] === "a") {
+        count += 1;
+      }
     }
-  });
-  return count;
+    if (count > maxCount) {
+      maxCount = count;
+      max = array[i];
+    }
+  }
+  return max;
 }
 
 console.log(findTheMostLetterA(["alphabet", "aardvark", "anarchy"]));  // "aardvark"
