@@ -19,7 +19,7 @@ var after2000 = doctors.filter(function(doctor) {
 
 var finalDoctors = after2000.map(function(variable) {
     var newDoctors = {
-        doctorNumber: variable.number,
+        doctorNumber: "#" + variable.number,
         playedBy: variable.actor,
         yearsPlayed: (variable.end - variable.begin + 1)
     };
